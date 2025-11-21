@@ -1,11 +1,14 @@
 import time
 import requests
 from datetime import datetime
-
+import os
 # ================== НАСТРОЙКИ ПОЛЬЗОВАТЕЛЯ ==================
 
-TELEGRAM_BOT_TOKEN = "8483676787:AAEVtCfTPro4PtEkH7BSw60rmBHXhNnKH7I"
-CHAT_ID = "5209523280"  # например "123456789"
+
+
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+CHAT_ID = os.getenv("CHAT_ID")
+
 
 SYMBOL = "BTCUSDT"
 INTERVAL = "30m"        # 30-минутный таймфрейм
@@ -352,3 +355,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
